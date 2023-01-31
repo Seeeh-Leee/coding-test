@@ -6,23 +6,20 @@ import (
 )
 
 func solution(babbling []string) int {
-    result := 0
-    count := 0
-    var bab = []string{"aya", "ye", "woo", "ma"}
-    var babCount = []int{3,2,3,2}
+    result  := 0
+    count   := 0
+    var bab         = []string{"aya", "ye", "woo", "ma"}
+    var babCount    = []int{3,2,3,2}
     
     for _, value := range babbling {
-        // fmt.Println(value)
         count =0
         for i:=0; i<len(bab); i++{
             if (strings.Contains(value, bab[i])) {
                 count += babCount[i]
-                // fmt.Println(count)
             }
         }
         if (len(value) == count){
             result++
-            // count =0
         }
     }
     return result
