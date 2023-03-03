@@ -30,13 +30,13 @@ vector<int> solution(int numer1, int denom1, int numer2, int denom2) {
 
 int gcdf(int big, int small)
 {
-    int quota;
+    int remainder;
     
     while(small)
     {
-        quota = big % small;
+        remainder = big % small;
         big = small;
-        small = quota;
+        small = remainder;
     }
     return big;
 }
